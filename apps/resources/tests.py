@@ -15,8 +15,8 @@ from django.urls import reverse
 class UrlTestCase(TestCase):
     def setUp(self):
         # read the json file
-        for item in json_file: # {"username": "john_kennedy","password": "jfkennedy","email": "jfken@example.com"}
-            User.objects.create(**item)
+        # for item in json_file: # {"username": "john_kennedy","password": "jfkennedy","email": "jfken@example.com"}
+        #     User.objects.create(**item)
         self.browser = Client()
 
     def test_homepage_route(self):
