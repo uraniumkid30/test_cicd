@@ -24,3 +24,5 @@ jobs:
       - name: Run our Unit Test
         run: |
           make dev-test2
+        env:
+          SECRET_KEY: ${{ secrets.SECRET_KEY }}
