@@ -123,30 +123,30 @@ AUTH_USER_MODEL = "user.User"  # app name.class name
 MEDIA_URL = "/media/"  # Public URL to access media files
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")  # Where files are physically stored
 
-LOGGING = {
-    "version": 1,
-    "disable_existing_loggers": False,
-    "formatters": {
-        "simple_format": {
-            "format": "{levelname} {asctime} {message}",
-            "style": "{",
-        }
-    },
-    "handlers": {
-        "console": {
-            "class": "logging.StreamHandler",  # write the input message to the terminal
-            "formatter": "simple_format",
-        },
-        "file": {
-            "class": "logging.FileHandler",
-            "filename": BASE_DIR / "config" / "logs" / "information.log",
-            "formatter": "simple_format",
-        },
-    },
-    "loggers": {
-        "my_first_logger": {
-            "handlers": ["console", "file"],
-            "level": "DEBUG",  # minimum level
-        }
-    },
-}
+# LOGGING = {
+#     "version": 1,
+#     "disable_existing_loggers": False,
+#     "formatters": {
+#         "simple_format": {
+#             "format": "{levelname} {asctime} {message}",
+#             "style": "{",
+#         }
+#     },
+#     "handlers": {
+#         "console": {
+#             "class": "logging.StreamHandler",  # write the input message to the terminal
+#             "formatter": "simple_format",
+#         },
+#         "file": {
+#             "class": "logging.FileHandler",
+#             "filename": BASE_DIR / "config" / "logs" / "information.log",
+#             "formatter": "simple_format",
+#         },
+#     },
+#     "loggers": {
+#         "my_first_logger": {
+#             "handlers": ["console", "file"],
+#             "level": "DEBUG",  # minimum level
+#         }
+#     },
+# }
