@@ -29,7 +29,7 @@ dev-test:
 	python manage.py test $(route) --settings=config.settings.dev
 
 dev-test2:
-	python manage.py test apps --settings=config.settings.dev
+	python manage.py test apps --keepdb --settings=config.settings.dev
 
 dev-custom-command:
 	python manage.py get_current_date --settings=config.settings.dev
