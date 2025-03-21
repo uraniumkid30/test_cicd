@@ -1,0 +1,23 @@
+<!-- the form can be passed as a variable -->
+<!--{{ my_form }}-->
+
+<!--{{ form }}-->
+
+<!--{{ form.as_p }} <p> </p>-->
+
+<!--{{ form.as_ul }}  <li> </li>-->
+
+<!-- <form> 
+    {{ form }}
+    <button>Send</button>
+
+
+</form> -->
+
+<form method="post"> 
+    {% csrf_token %}
+    {{ form }}
+    <button>Send</button>
+
+
+</form>

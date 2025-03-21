@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block body_items %}
+    <h1>List of all my Authors</h1>
+    <p> <a href="{% url 'my_books' %}">go to this link</a></p>
+    {% for x in authors_from_db %}
+        <p> {{ x.name }} </p>
+    {% endfor %}
+    
+{% endblock %}   

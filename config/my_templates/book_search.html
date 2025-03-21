@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Search</title>
+    <link rel="stylesheet" href="{% static 'css/my_style.css' %}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Search Books</h1>
+
+        <!-- Search Form -->
+        <form method="GET">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Search</button>
+        </form>
+
+        <!-- Books List -->
+        {% if books %}
+            {% for book in books %}
+                <div class="book-card">
+                    <h2>{{ book.title }}</h2>
+                    <p><strong>Author:</strong> {{ book.author.name }}</p>
+                    <p><strong>Category:</strong> {{ book.get_category_display }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No books found.</p>
+        {% endif %}
+    </div>
+
+
